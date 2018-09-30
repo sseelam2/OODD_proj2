@@ -6,6 +6,7 @@
   <p class="flash-error"><%= flash[:alert] %></p>
 <% end %>
 <div  class="row">
+  <div class="  col-md-4 offset-md-4">
 <%= form_for(:signinform, :url =>{action: "validate"}, method: "post" )do |f| %>
 
   <div class="col-xs-4 form-group">
@@ -26,9 +27,10 @@
 
   <div class="actions">
     <%= f.submit "Sign In", {:class => "btn btn-lg btn-primary btn-block"} %>
-  </div>
+  </div> <br/>
   <button class="btn btn-lg btn-primary btn-block">   <%= link_to 'Register', {:controller => "signup", :action =>"new"} , :class => "color_id"%> </button>
 
 
 <% end %>
+</div>
 </div>
