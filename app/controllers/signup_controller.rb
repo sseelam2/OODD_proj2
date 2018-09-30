@@ -25,18 +25,20 @@ class SignupController < ApplicationController
 
     @realtor = Realtor.new(realtor_params)
     if @realtor.save
-      #redirect_to(:action => 'index')
-      puts "saved"
+      flash[:notice] = "Signup Successful, Please Login"
+      redirect_to :controller => 'signin', :action => 'index'
     else
+      flash[:alert_signup] = "Signup Failed, Please Retry!"
       render ('new')
     end
 
     else
       @house_hunter = HouseHunter.new(hunter_params)
       if @house_hunter.save
-        #redirect_to(:action => 'index')
-        puts "saved"
+        flash[:notice] = "Signup Successful, Please Login"
+        redirect_to :controller => 'signin', :action => 'index'
       else
+        flash[:alert_signup] = "Signup Failed, Please Retry!"
         render ('new')
       end
     end
