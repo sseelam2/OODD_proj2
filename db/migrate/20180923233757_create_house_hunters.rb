@@ -5,6 +5,7 @@ class CreateHouseHunters < ActiveRecord::Migration[5.2]
       t.string :password
       t.string :name
       t.string :preferred_contact
+      t.integer :phoneNumber
 
       t.timestamps
     end

@@ -12,8 +12,8 @@
 
 ActiveRecord::Schema.define(version: 2018_09_24_002110) do
 
-  create_table "companies", primary_key: "company_id", id: :string, force: :cascade do |t|
-    t.integer "id", null: false
+  create_table "companies", force: :cascade do |t|
+    t.string "company_id"
     t.string "name"
     t.string "website"
     t.text "address"
@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 2018_09_24_002110) do
     t.string "password"
     t.string "name"
     t.string "preferred_contact"
+    t.integer "phoneNumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "house_hunters_email_uindex", unique: true
   end
 
   create_table "houses", force: :cascade do |t|
@@ -60,11 +60,10 @@ ActiveRecord::Schema.define(version: 2018_09_24_002110) do
     t.text "email"
     t.string "name"
     t.text "password"
-    t.string "company_id"
+    t.string "companyId"
     t.integer "phoneNumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "realtors_email_uindex", unique: true
   end
 
 end
