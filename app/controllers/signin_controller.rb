@@ -1,12 +1,13 @@
 class SigninController < ApplicationController
   def index
+    flash[:alert] =""
   end
 
   def show
   end
 
 def validate
-  puts "validating" +params[:signinform][:email]
+
   @signin = Signinform.new(params[:signinform][:email],params[:signinform][:password])
   puts "------------------------------------"
 
@@ -15,17 +16,27 @@ def validate
     if(@signin.password == @hunter.password)
       puts "success"
       redirect_to :controller => 'myaccount', :action => 'index', :param1 => @signin.email
+    else
+
+      flash[:alert] = "Please check the password!"
+      render ('index')
     end
     puts @hunter.name
-  else if(Realtor.find_by_email(@signin.email))
+  elsif(Realtor.find_by_email(@signin.email))
        @realtor=Realtor.find_by_email(@signin.email)
        if(@signin.password == @realtor.password)
          puts "success"
          redirect_to :controller => 'myaccount', :action => 'index', :param1 => @signin.email
-       end
-       puts realtor.name
-  end
+       else
 
+         flash[:alert] = "Please check the password!"
+         render ('index')
+       end
+
+  else
+
+      flash[:alert] = "Please check the email entered!"
+      render ('index')
   end
   end
 

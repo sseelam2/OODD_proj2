@@ -1,0 +1,104 @@
+
+<div class="container">
+  <h2>Registration Form</h2><br>
+  <div class="container">
+
+    <form>
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <label class="radio-inline">
+            <input type="radio" name="op"  value="1" onclick="show1();">  Realtor Sign up
+          </label>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <label class="radio-inline">
+            <input type="radio" name="op" value="2" onclick="show2();">  House Hunter Sign Up
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <br />
+  <br />
+  <div id="realtor_signup">
+
+    <%= form_for(:realtor, :url =>{action: "create"}, method: "post" )do |f| %>
+
+      <div class="field form-group">
+        <%= f.label :name ,  {:class => "col-md-4 control-label" }  %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, {:class => "col-md-4 control-label" }   %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password,  {:class => "col-md-4 control-label" }   %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :Confirm_Password,  {:class => "col-md-4 control-label" }   %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+      <div class="field">
+        <%= f.label :phone_no, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :phoneNumber, autofocus: true, autocomplete: "phoneNumber" %>
+      </div>
+      <div class="field">
+        <%= f.label :Company_Name, {:class => "col-md-4 control-label" }   %>
+        <%= f.select :companyId, [['Hot','hot'],['Medium','medium'],['Cold','cold']], {:class => " col-md-4 control-label"} %>
+        <%= f.collection_select(:company,Company.all, :id, :name, {:include_blank => "Please select Company"}, {:class=>"col-md-4 control-label"})%>
+
+      </div>
+      <%= hidden_field_tag :role, "Realtor"%>
+      <div class="actions">
+        <%= f.submit "Sign up", {:class => "btn btn-warning"} %>
+      </div>
+    <% end %>
+
+  </div>
+  <div id="hh_signup">
+    <%= form_for(:house_hunter, :url =>{action: "create"}, method: "post" )do |f| %>
+
+      <div class="field form-group">
+        <%= f.label :name ,  {:class => "col-md-4 control-label" }  %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, {:class => "col-md-4 control-label" }   %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password,  {:class => "col-md-4 control-label" }   %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :Confirm_Password,  {:class => "col-md-4 control-label" }   %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+      <div class="field">
+        <%= f.label :phone_no, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :phoneNumber, autofocus: true, autocomplete: "phoneNumber" %>
+      </div>
+      <%= hidden_field_tag :role, "Hunter"%>
+      <div class="actions">
+        <%= f.submit "Sign up", {:class => "btn btn-warning"} %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+
