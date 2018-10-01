@@ -1,0 +1,61 @@
+
+<div class="container">
+  <h2>Add Companies </h2><br>
+
+  <br />
+  <br />
+  <% if flash[:noticeAddCompany] %>
+    <p class="flash-error"><%= flash[:noticeAddCompany] %></p>
+  <% end %>
+  <div >
+
+    <%= form_for(:company, :url =>{action: "create"}, method: "post" )do |f| %>
+
+      <div class="field form-group">
+        <%= f.label :Com ,  {:class => "col-md-4 control-label" }  %>
+        <%= f.text_field :company_id, autofocus: true, autocomplete: "company_id" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :name, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+      </div>
+      <div class="field">
+        <%= f.label :website, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :website, autofocus: true, autocomplete: "website" %>
+      </div>
+      <div class="field">
+        <%= f.label :address, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :size, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :size, autofocus: true, autocomplete: "size" %>
+      </div>
+      <div class="field">
+        <%= f.label :founded, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :founded, autofocus: true, autocomplete: "founded" %>
+      </div>
+
+
+
+      <div class="field">
+        <%= f.label :revenue, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :revenue, autofocus: true, autocomplete: "revenue" %>
+      </div>
+      <div class="field">
+        <%= f.label :synopsis, {:class => "col-md-4 control-label" }   %>
+        <%= f.text_field :synopsis, autofocus: true, autocomplete: "synopsis" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Add", {:class => "btn btn-lg btn-primary btn-block"} %>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+

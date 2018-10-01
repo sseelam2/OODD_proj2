@@ -26,7 +26,11 @@
       <div class="row">
       <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', { :action =>"show"} , :class => "color_id"%> </button>
       </div>
-
+    <br/>
+    <%= link_to 'View Companies', { :action =>"companies"} , :class => "btn btn-primary"%> <br/><br/>
+    <%= link_to 'View Realtor', { :action =>"realtors"} , :class => "btn btn-primary"%> <br/><br/>
+    <%= link_to 'View House Hunters', { :action =>"house_hunters"} , :class => "btn btn-primary"%> <br/><br/>
+    <%= link_to 'View Houses', {:action =>"houses"} , :class => "btn btn-primary"%>
     <% end %>
 
   <% if session[:role] == "realtor" %>
@@ -66,11 +70,11 @@
 
     </div>
     <div class="row">
-      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', {:action =>"edit"} , :class => "color_id"%> </button>
+      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', {:action =>"show"} , :class => "color_id"%> </button>
     </div>
   <% end %>
 
-  <% if session[:role] == "realtor" %>
+  <% if session[:role] == "hunter" %>
     <div class="row">
       <div class="col-sm-3 col-md-1" >
         <p>Name:</p>
@@ -107,7 +111,9 @@
 
     </div>
     <div class="row">
-      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', {:controller => "signup", :action =>"new"} , :class => "color_id"%> </button>
+      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', {:action =>"show"} , :class => "color_id"%> </button>
     </div>
   <% end %>
+
+
 </div>

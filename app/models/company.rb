@@ -4,6 +4,6 @@ class Company < ApplicationRecord
   validates :name, presence: true
   validates :website, presence: true
   validates :address, presence: true
-  belongs_to :realtor
-  has_many :realtors
+  #belongs_to :realtor
+ # has_many :realtors
 end

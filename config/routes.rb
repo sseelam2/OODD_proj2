@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  get 'companies/index'
   get 'myaccount/index'
   get 'admin' => 'admin#index'
+  match ':controller(/:action(/:id))', :via => [:get, :post]
   post 'myaccount/update'
   resources :myaccount, :househunters
  # resources :signup
