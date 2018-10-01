@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_30_234735) do
+ActiveRecord::Schema.define(version: 2018_10_01_010418) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
@@ -60,6 +60,13 @@ ActiveRecord::Schema.define(version: 2018_09_30_234735) do
     t.string "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "name", null: false
+    t.binary "data", null: false
+    t.string "filename"
+    t.string "mime_type"
   end
 
   create_table "realtors", force: :cascade do |t|

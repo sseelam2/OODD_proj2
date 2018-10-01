@@ -1,7 +1,7 @@
 class MyaccountController < ApplicationController
   def index
     puts "in edit"
-    puts  session[:user_id]
+    puts session[:user_id]
 
 
 
