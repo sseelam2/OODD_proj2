@@ -1,5 +1,7 @@
 class CompaniesController < ApplicationController
+  before_action :set_post, only: [:edit, :update, :show, :destroy]
   def index
+    @companies= Company.all
   end
   def new
     @company = Company.new()
@@ -19,8 +21,40 @@ class CompaniesController < ApplicationController
  end
   end
 
+def show
+
+end
+  def edit
+
+  end
+
+  def update
+    respond_to do |format|
+      if @company.update(company_params)
+        format.html { redirect_to @company, notice: 'company was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @company.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /categories/1
+  # DELETE /categories/1.json
+  def destroy
+    @company.destroy
+    respond_to do |format|
+      format.html { redirect_to companies_url }
+      format.json { head :no_content }
+    end
+  end
 
   private
+  def set_post
+
+      @company = Company.find(params[:id])
+  end
 
   def company_params
     # same as using "params[:realtor]", except that it:

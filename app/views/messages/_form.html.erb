@@ -1,0 +1,27 @@
+<%= form_for(@message )do |f| %>
+
+
+  <div class="field">
+    <%= f.label :subject, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :subject, autofocus: true, autocomplete: "subject" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :query ,  {:class => "col-md-4 control-label" }  %>
+    <%= f.text_field :query, autofocus: true, autocomplete: "query" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :reply, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :reply, autofocus: true, autocomplete: "reply" %>
+  </div>
+  <div class="field">
+    <%= f.label :house_id, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :house_id, autofocus: true, autocomplete: "house_id" %>
+  </div>
+  <%= f.hidden_field :house_hunter_id, :value =>  :session[:user_id] %>
+
+  <div class="actions">
+    <%= f.submit "Add", {:class => "btn btn-lg btn-primary btn-block"} %>
+  </div>
+<% end %>

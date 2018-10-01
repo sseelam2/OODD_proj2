@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+  resources :companies, :realtors, :house_hunters, :houses
+  get 'house_hunters/index'
+  get 'realtors/index'
+  get 'houses/index'
   get 'companies/index'
   get 'myaccount/index'
   get 'admin' => 'admin#index'

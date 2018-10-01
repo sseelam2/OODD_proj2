@@ -1,0 +1,37 @@
+<h1>Companies</h1>
+
+<h1>Listing Companies</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>E-Mail</th>
+    <th>Company Id</th>
+    <th>Phone Number</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @realtors.each do |realtor| %>
+    <tr>
+      <td><%= realtor.name %></td>
+      <td><%= realtor.email %></td>
+      <td><%= realtor.companyId %></td>
+      <td><%= realtor.phoneNumber %></td>
+
+      <td> <%= link_to 'Edit', edit_realtor_path(realtor) %> </td>
+      <td><%= link_to 'Destroy', realtor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add Realtor', { :action =>"new"} , :class => "btn btn-primary"%> <br/><br/>

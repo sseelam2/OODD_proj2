@@ -1,0 +1,45 @@
+<h1>Companies</h1>
+
+<h1>Listing Companies</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Company Id</th>
+    <th>Realtor_id</th>
+
+    <th>Address</th>
+    <th>Square Feet</th>
+    <th>Style</th>
+    <th>Year</th>
+    <th>Basement</th>
+    <th>Floor</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @houses.each do |house| %>
+    <tr>
+      <td><%= house.company_id %></td>
+      <td><%= house.realtor_id %></td>
+      <td><%= house.address %></td>
+      <td><%= house.sq_ft %></td>
+      <td><%= house.style %></td>
+      <td><%= house.year %></td>
+      <td><%= house.basement %></td>
+      <td><%= house.floor %></td>
+      <td> <%= link_to 'Edit', edit_house_path(house) %> </td>
+      <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add House', {:action =>"new"} , :class => "btn btn-primary"%> <br/><br/>

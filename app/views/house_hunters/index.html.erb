@@ -1,0 +1,39 @@
+<h1>Companies</h1>
+
+<h1>Listing Companies</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>E-mail</th>
+    <th>Preferred Contact</th>
+    <th>Phone Number</th>
+
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @house_hunters.each do |house_hunter| %>
+    <tr>
+
+      <td><%= house_hunter.name %></td>
+      <td><%= house_hunter.email %></td>
+      <td><%= house_hunter.preferred_contact %></td>
+      <td><%= house_hunter.phoneNumber %></td>
+
+      <td> <%= link_to 'Edit', edit_house_hunter_path(house_hunter) %> </td> /
+      <td><%= link_to 'Destroy', house_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add House Hunter', { :action =>"new"} , :class => "btn btn-primary"%> <br/><br/>

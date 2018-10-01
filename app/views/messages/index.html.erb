@@ -1,0 +1,40 @@
+<h1>Messages</h1>
+
+<h1>Listing Messages</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>House Id</th>
+    <th>subject</th>
+    <th>Query</th>
+    <th>House Hunter ID</th>
+    <th>Reply</th>
+
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @messages.each do |message| %>
+    <tr>
+      <td><%= message.house_id %></td>
+      <td><%= message.subject %></td>
+      <td><%= message.query %></td>
+      <td><%= message.house_hunter_id %></td>
+      <td><%= message.reply %></td>
+
+
+      <td> <%= link_to 'Edit', edit_message_path(message) %> </td> /
+      <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+

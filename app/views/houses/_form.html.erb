@@ -1,0 +1,47 @@
+<%= form_for(@house )do |f| %>
+
+  <div class="field form-group">
+    <%= f.label :company_id ,  {:class => "col-md-4 control-label" }  %>
+    <%= f.text_field :company_id, autofocus: true, autocomplete: "company_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :realtor_id, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :realtor_id, autofocus: true, autocomplete: "realtor_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sq_ft, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :sq_ft, autofocus: true, autocomplete: "sq_ft" %>
+  </div>
+  <div class="field">
+    <%= f.label :style, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :style, autofocus: true, autocomplete: "style" %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :year, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :year, autofocus: true, autocomplete: "year" %>
+  </div>
+  <div class="field">
+    <%= f.label :basement, {:class => "col-md-4 control-label" }   %>
+    <%= f.select :basement, [[true,'Yes'],[false,'No']], {:class => " col-md-4 control-label"} %>
+
+
+  </div>
+  <div class="field">
+    <%= f.label :floor, {:class => "col-md-4 control-label" }   %>
+    <%= f.text_field :floor, autofocus: true, autocomplete: "floor" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add", {:class => "btn btn-lg btn-primary btn-block"} %>
+  </div>
+<% end %>
