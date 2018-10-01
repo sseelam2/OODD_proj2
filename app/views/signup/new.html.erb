@@ -20,6 +20,9 @@
   </div>
   <br />
   <br />
+  <% if flash[:alert_signup] %>
+    <p class="flash-error"><%= flash[:alert_signup] %></p>
+  <% end %>
   <div id="realtor_signup">
 
     <%= form_for(:realtor, :url =>{action: "create"}, method: "post" )do |f| %>

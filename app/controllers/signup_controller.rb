@@ -5,7 +5,8 @@ class SignupController < ApplicationController
 
 
   def new
-    @realtor = Realtor.new()
+   # flash[:alert_signup] =""
+        @realtor = Realtor.new()
     @house_hunter = HouseHunter.new()
     @companies = Company.all
     puts "newwwwwwww"
@@ -28,8 +29,9 @@ class SignupController < ApplicationController
       flash[:notice] = "Signup Successful, Please Login"
       redirect_to :controller => 'signin', :action => 'index'
     else
+      puts "-------------"
       flash[:alert_signup] = "Signup Failed, Please Retry!"
-      render ('new')
+      redirect_to  :action => 'new'
     end
 
     else
@@ -39,7 +41,7 @@ class SignupController < ApplicationController
         redirect_to :controller => 'signin', :action => 'index'
       else
         flash[:alert_signup] = "Signup Failed, Please Retry!"
-        render ('new')
+        redirect_to  :action => 'new'
       end
     end
 
