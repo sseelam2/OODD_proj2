@@ -9,8 +9,20 @@ class SigninController < ApplicationController
 def validate
 
   @signin = Signinform.new(params[:signinform][:email],params[:signinform][:password])
+  if(Admin.find_by_email(@signin.email))
 
-  if(HouseHunter.find_by_email(@signin.email))
+  @admin=Admin.find_by_email(@signin.email)
+  if(@signin.password == @admin.password)
+    puts "success"
+    session[:user_id] = @admin.id
+    session[:role] = "admin"
+    redirect_to :controller => 'myaccount', :action => 'index'
+  else
+
+    flash[:alert] = "Please check the password!"
+    render ('index')
+  end
+  elsif(HouseHunter.find_by_email(@signin.email))
     @hunter=HouseHunter.find_by_email(@signin.email);
     if(@signin.password == @hunter.password)
       puts "success"
@@ -22,7 +34,6 @@ def validate
       flash[:alert] = "Please check the password!"
       render ('index')
     end
-    puts @hunter.name
   elsif(Realtor.find_by_email(@signin.email))
        @realtor=Realtor.find_by_email(@signin.email)
        if(@signin.password == @realtor.password)
