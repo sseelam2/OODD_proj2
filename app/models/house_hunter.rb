@@ -10,5 +10,5 @@ class HouseHunter < ApplicationRecord
 
 
   validates :name, presence: true
-  validates :phone, presence: true, length: {maximum: 10}
+  validates :phoneNumber, presence: true, length: {maximum: 10}
 end

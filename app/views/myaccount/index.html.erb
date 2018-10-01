@@ -2,21 +2,112 @@
 
 
 <div class="container-fluid">
-  <h1>Welcome</h1>
+  <h1>Welcome <%= session[:role].upcase %></h1>
+  <% if flash[:noticeadu] %>
+    <p class="flash-notice"><%= flash[:noticeadu] %></p>
+  <% end %>
+  <% if session[:role] == "admin" %>
   <div class="row">
-    <div class="col-sm-3 col-md-6" style="background-color:yellow;">
-      <p>Lorem ipsum...</p>
+    <div class="col-sm-3 col-md-1" >
+      <p>Name:</p>
     </div>
-    <div class="col-sm-3 col-md-6" style="background-color:pink;">
-      <p>Sed ut perspiciatis...</p>
+    <div class="col-sm-3 col-md-3" >
+      <p><%= @admin.name%></p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-3 col-md-6" style="background-color:yellow;">
-      <p>Lorem ipsum...</p>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Email:</p>
+      </div>
+    <div class="col-sm-3 col-md-3">
+      <p><%= @admin.email%></p>
     </div>
-    <div class="col-sm-3 col-md-6" style="background-color:pink;">
-      <p>Sed ut perspiciatis...</p>
     </div>
-  </div>
+      <div class="row">
+      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', { :action =>"show"} , :class => "color_id"%> </button>
+      </div>
+
+    <% end %>
+
+  <% if session[:role] == "realtor" %>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Name:</p>
+      </div>
+      <div class="col-sm-3 col-md-3" >
+        <p><%= @realtor.name%></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Email:</p>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <p><%= @realtor.email%></p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Phone Number:</p>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <p><%= @realtor.phoneNumber%></p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Company:</p>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <p><%= @realtor.companyId%></p>
+      </div>
+
+    </div>
+    <div class="row">
+      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', {:action =>"edit"} , :class => "color_id"%> </button>
+    </div>
+  <% end %>
+
+  <% if session[:role] == "realtor" %>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Name:</p>
+      </div>
+      <div class="col-sm-3 col-md-3" >
+        <p><%= @house_hunter.name%></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Email:</p>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <p><%= @house_hunter.email%></p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Phone Number:</p>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <p><%= @house_hunter.phoneNumber%></p>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-sm-3 col-md-1" >
+        <p>Preferred Contact:</p>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <p><%= @house_hunter.preferred_contact%></p>
+      </div>
+
+    </div>
+    <div class="row">
+      <button class="btn btn-lg btn-primary btn-block col-md-2">   <%= link_to 'Edit', {:controller => "signup", :action =>"new"} , :class => "color_id"%> </button>
+    </div>
+  <% end %>
 </div>

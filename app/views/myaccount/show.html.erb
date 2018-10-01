@@ -1,0 +1,96 @@
+<% if session[:role] == "admin" %>
+  <%= form_for(@admin, :url => {controller:"myaccount", action:"update"}, method: "post") do |f| %>
+    <% if flash[:noticeadu] %>
+      <p class="flash-notice"><%= flash[:noticeadu] %></p>
+    <% end %>
+    <% if @admin.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+        <ul>
+          <% @admin.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<%end %>
+
+<% if session[:role] == "realtor" %>
+  <%= form_for(@realtor ,:url =>{action: "edit"}, method: "post") do |f| %>
+
+    <% if @realtor.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@realtor.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+        <ul>
+          <% @realtor.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :companyId %><br>
+      <%= f.text_field :companyId %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<%end %>
+
+<% if session[:role] == "hunter" %>
+  <%= form_for(@house_hunter, :url =>{action: "edit"}, method: "post") do |f| %>
+
+    <% if @admin.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@house_hunter.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+        <ul>
+          <% @house_hunter.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :phoneNumber %><br>
+      <%= f.text_field :phoneNumber %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<%end %>

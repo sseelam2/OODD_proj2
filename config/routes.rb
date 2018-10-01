@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'myaccount/index'
+  get 'admin' => 'admin#index'
+  post 'myaccount/update'
   resources :myaccount, :househunters
  # resources :signup
  # resources :signin
