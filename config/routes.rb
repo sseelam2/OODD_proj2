@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'myaccount/index'
-  resources :myaccount
+  resources :myaccount, :househunters
  # resources :signup
  # resources :signin
   match ':controller(/:action(/:id))', :via => [:get, :post]

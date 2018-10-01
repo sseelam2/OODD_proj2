@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="development">
-  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.10">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="4.11">
     <root id="1">
       <ServerVersion>3.20.1</ServerVersion>
     </root>
@@ -69,7 +69,6 @@
     <index id="25" parent="7" name="sqlite_autoindex_ar_internal_metadata_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="26" parent="7">
@@ -127,7 +126,6 @@
     <index id="38" parent="8" name="sqlite_autoindex_companies_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>company_id</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="39" parent="8">
@@ -169,7 +167,6 @@
     </column>
     <index id="47" parent="9" name="house_hunters_email_uindex">
       <ColNames>email</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="48" parent="9">
@@ -300,7 +297,6 @@
     </column>
     <index id="77" parent="12" name="realtors_email_uindex">
       <ColNames>email</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="78" parent="12">
@@ -325,7 +321,6 @@
     <index id="82" parent="13" name="sqlite_autoindex_schema_migrations_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="83" parent="13">
