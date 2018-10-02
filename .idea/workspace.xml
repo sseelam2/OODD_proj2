@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b80a98b-cb37-458f-8ddd-51d5f30b6ae1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SellingBuying.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SellingBuying.iml" afterDir="false" />
-    </list>
+    <list default="true" id="4b80a98b-cb37-458f-8ddd-51d5f30b6ae1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OODD_Project2@Development__SellingBuying.rcov" NAME="Development: SellingBuying Coverage Results" MODIFIED="1538348511222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
+    <SUITE FILE_PATH="coverage/OODD_Project2@Development__SellingBuying.rcov" NAME="Development: SellingBuying Coverage Results" MODIFIED="1538461322412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/SellingBuying@db_migrate_status__SellingBuying.rcov" NAME="db:migrate:status: SellingBuying Coverage Results" MODIFIED="1537746324364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/OODD_Project2@db_migrate__SellingBuying.rcov" NAME="db:migrate: SellingBuying Coverage Results" MODIFIED="1538355901743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/OODD_Project2@db_migrate_status__SellingBuying.rcov" NAME="db:migrate:status: SellingBuying Coverage Results" MODIFIED="1538349258270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
@@ -552,7 +550,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Rake.db:migrate: SellingBuying">
+  <component name="RunManager" selected="Rails.Development: SellingBuying">
     <configuration name="Development: SellingBuying" type="RailsRunConfigurationType" factoryName="Rails">
       <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
       <module name="SellingBuying" />
@@ -726,7 +724,7 @@
       <workItem from="1538346131572" duration="2159000" />
       <workItem from="1538348880151" duration="4556000" />
       <workItem from="1538355027570" duration="1110000" />
-      <workItem from="1538450581631" duration="7967000" />
+      <workItem from="1538450581631" duration="8340000" />
     </task>
     <task id="LOCAL-00001" summary="View changes">
       <created>1538340155756</created>
@@ -809,7 +807,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40371000" />
+    <option name="totallyTimeSpent" value="40744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
