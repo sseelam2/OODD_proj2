@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'messages/index'
   resources :companies, :realtors, :house_hunters, :houses, :messages
+
   get 'house_hunters/index'
   get 'realtors/index'
   get 'houses/index'
@@ -12,7 +13,8 @@ Rails.application.routes.draw do
   resources :myaccount, :househunters
  # resources :signup
  # resources :signin
- root to: "signin#index"
+
   match ':controller(/:action(/:id))', :via => [:get, :post]
+  root to: "signin#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
