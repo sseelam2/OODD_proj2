@@ -77,6 +77,11 @@ def validate
   def destroy
 
   end
+  def signout
+    session[:role]=""
+    session[:user_id]=""
+    redirect_to :controller => 'signin', :action => 'index'
+  end
 
 
 

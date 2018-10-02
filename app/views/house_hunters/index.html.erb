@@ -1,39 +1,40 @@
-<h1>Companies</h1>
+<h1 >House Hunters</h1>
 
-<h1>Listing Companies</h1>
+<h3>********Listing House Hunters**********</h3>
+<br>
+  <div class="row">
+    <div class ="col-md-2">
+      Name
+    </div>
+    <div class ="col-md-2">
+      E-mail
+    </div>
+    <div class ="col-md-2">
+      Preferred Contact
+    </div>
+    <div class ="col-md-2">
+      Phone Number
+    </div>
 
-<table>
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>E-mail</th>
-    <th>Preferred Contact</th>
-    <th>Phone Number</th>
+  </div>
 
-
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  </thead>
-
-  <tbody>
+  <hr>
   <% @house_hunters.each do |house_hunter| %>
-    <tr>
 
-      <td><%= house_hunter.name %></td>
-      <td><%= house_hunter.email %></td>
-      <td><%= house_hunter.preferred_contact %></td>
-      <td><%= house_hunter.phoneNumber %></td>
+
+  <div class ="col-md-2"><%= house_hunter.name %></div>|
+  <div class ="col-md-2"><%= house_hunter.email %></div>|
+  <div class ="col-md-2"><%= house_hunter.preferred_contact %></div>|
+  <div class ="col-md-2"><%= house_hunter.phoneNumber %></div>|
       <% if session[:role] == "admin" %>
-      <td> <%= link_to 'Edit', edit_house_hunter_path(house_hunter) %> </td> /
-      <td><%= link_to 'Destroy', house_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <div class ="col-md-2"> <%= link_to 'Edit', edit_house_hunter_path(house_hunter) %> /
+      <%= link_to 'Destroy', house_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       <% end %>
-    </tr>
+<hr>
   <% end %>
-  </tbody>
-</table>
+
 
 <br>
-
+<% if session[:role] == "admin" %>
 <%= link_to 'Add House Hunter', { :action =>"new"} , :class => "btn btn-primary"%> <br/><br/>
+<%end %>

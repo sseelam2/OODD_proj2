@@ -1,54 +1,69 @@
-<h1>Companies</h1>
 
-<h1>Listing Companies</h1>
+  <h1>Houses</h1>
 
-<table>
-  <thead>
-  <tr>
-    <th>Company Id</th>
-    <th>Realtor_id</th>
+  <h3>********Listing Houses**********</h3>
+  <br>
+  <div class="row">
+    <div class ="col-md-1">
+      Company Id
+    </div>
+    <div class ="col-md-1">
+      Realtor Id
+    </div>
+    <div class ="col-md-2">
+      Address
+    </div>
+    <div class ="col-md-1">
+      Square Feet
+    </div>
+    <div class ="col-md-1">
+     Style
+    </div>
+    <div class ="col-md-1">
+      Year
+    </div>
+    <div class ="col-md-1">
+      Basement
+    </div>
+    <div class ="col-md-1">
+      Floor
+    </div>
 
-    <th>Address</th>
-    <th>Square Feet</th>
-    <th>Style</th>
-    <th>Year</th>
-    <th>Basement</th>
-    <th>Floor</th>
+  </div>
 
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  </thead>
-
-  <tbody>
+  <hr>
   <% @houses.each do |house| %>
-    <tr>
-      <td><%= house.company_id %></td>
-      <td><%= house.realtor_id %></td>
-      <td><%= house.address %></td>
-      <td><%= house.sq_ft %></td>
-      <td><%= house.style %></td>
-      <td><%= house.year %></td>
-      <td><%= house.basement %></td>
-      <td><%= house.floor %></td>
+<div class="row">
+    <div class ="col-md-1"><%= house.company_id %></div>|
+    <div class ="col-md-1"><%= house.realtor_id %></div>|
+    <div class ="col-md-2"><%= house.address %></div>|
+    <div class ="col-md-1"><%= house.sq_ft %></div>|
+    <div class ="col-md-1"><%= house.style %></div>|
+    <div class ="col-md-1"><%= house.year %></div>|
+    <div class ="col-md-1"><%= house.basement %></div>|
+    <div class ="col-md-1"><%= house.floor %></div>|
 
       <% if session[:role] == "admin" || (session[:role] == "realtor" && (house.realtor_id.to_s == session[:user_id].to_s ) ) %>
 
-    <td> <%= link_to 'Edit', edit_house_path(house) %> </td>
-      <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <div class ="col-md-1"> <%= link_to 'Edit', edit_house_path(house) %> /
+        <%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       <% end %>
 
-      <% session[:comp_id] = house.company_id%>
+      <% if session[:role] == "realtor" && session[:comp_id] = house.company_id%>
 
-      <% if session[:role] == "hunter"%>
-        <td> <%= link_to 'Inquire', {:controller => "messages", :action => "new" }%> </td>
-        <td> <%= link_to 'Mark Interested', edit_house_path(house) %> </td>
-      <%end %>
-    </tr>
+    <%session[:house_id]=house.id %>
+    <div class ="col-md-1">   <%= link_to 'Upload Photo', {:controller =>"photos",:action =>"new"} %></div>
   <% end %>
-  </tbody>
-</table>
+  <% if session[:role] == "hunter"%>
+    <div class ="col-md-2"> <%= link_to 'View Photo', {:controller =>"photos",:action =>"serve", :id => house.id} , method:"get"%>/
+
+      <%= link_to 'Inquire', {:controller => "messages", :action => "new" }%>/
+        <%= link_to 'Mark Interested', edit_house_path(house) %> </div>
+      <%end %>
+<hr>
+</div>
+  <% end %>
+
 
 <br>
 

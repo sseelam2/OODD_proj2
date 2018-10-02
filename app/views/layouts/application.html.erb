@@ -8,8 +8,13 @@
 </head>
 <body>
 
-<p class="notice"><%= notice  %></p>
-<p class="alert"><%= alert %></p>
+
+<% if controller.controller_name != "signin" && controller.controller_name != "signup"  %>
+<div class="row" style="float: right; padding-right: 100px;"><div class="float-md-right" ><%= link_to 'Signout', { :controller => "signin", :action =>"signout"} , :class => "btn btn-primary float-md-right"%> &nbsp;&nbsp;&nbsp;
+</div></div><%end %>
+<% if controller.controller_name != "signin" && controller.controller_name != "signup"  %>
+<div class="row" style="float: left; padding-left: 10px;"><div class="float-md-right" ><%= link_to 'Home', { :controller => "myaccount", :action =>"index"} , :class => "btn btn-primary float-md-right"%> &nbsp;&nbsp;&nbsp;
+</div></div><br><br><%end %>
 <%= yield %>
 
 </body>

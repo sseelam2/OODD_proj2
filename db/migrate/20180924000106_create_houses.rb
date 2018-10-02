@@ -9,6 +9,7 @@ class CreateHouses < ActiveRecord::Migration[5.2]
       t.integer :year
       t.binary :basement
       t.integer :floor
+
     end
   end
 end
