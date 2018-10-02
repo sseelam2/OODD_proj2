@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b80a98b-cb37-458f-8ddd-51d5f30b6ae1" name="Default Changelist" comment="" />
+    <list default="true" id="4b80a98b-cb37-458f-8ddd-51d5f30b6ae1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +14,7 @@
     <SUITE FILE_PATH="coverage/OODD_Project2@Development__SellingBuying.rcov" NAME="Development: SellingBuying Coverage Results" MODIFIED="1538461322412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/OODD_proj2@Development__SellingBuying.rcov" NAME="Development: SellingBuying Coverage Results" MODIFIED="1538505436016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/OODD_proj2@db_migrate_status__SellingBuying.rcov" NAME="db:migrate:status: SellingBuying Coverage Results" MODIFIED="1538507342530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
-    <SUITE FILE_PATH="coverage/OODD_proj2@db_migrate__SellingBuying.rcov" NAME="db:migrate: SellingBuying Coverage Results" MODIFIED="1538509066096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
+    <SUITE FILE_PATH="coverage/OODD_proj2@db_migrate__SellingBuying.rcov" NAME="db:migrate: SellingBuying Coverage Results" MODIFIED="1538511251533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/SellingBuying@db_migrate_status__SellingBuying.rcov" NAME="db:migrate:status: SellingBuying Coverage Results" MODIFIED="1537746324364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/OODD_Project2@db_migrate__SellingBuying.rcov" NAME="db:migrate: SellingBuying Coverage Results" MODIFIED="1538355901743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
     <SUITE FILE_PATH="coverage/OODD_Project2@db_migrate_status__SellingBuying.rcov" NAME="db:migrate:status: SellingBuying Coverage Results" MODIFIED="1538349258270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SellingBuying" />
@@ -262,6 +264,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="1" />
+          <entry key="enc" value="1" />
           <entry key="rb" value="4" />
           <entry key="sql" value="3" />
           <entry key="yml" value="1" />
@@ -269,6 +272,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Ruby" value="5" />
           <entry key="Scratch" value="3" />
           <entry key="YAML" value="1" />
@@ -276,13 +280,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="rb" value="38" />
+          <entry key="Gemfile" value="2" />
+          <entry key="rb" value="41" />
           <entry key="yml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Ruby" value="38" />
+          <entry key="Ruby" value="43" />
           <entry key="YAML" value="14" />
         </counts>
       </usages-collector>
@@ -290,7 +295,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -331,24 +336,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/companies/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="144">
+              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-68">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153" />
-          </provider>
+        <entry file="file://$PROJECT_DIR$/config/credentials.yml.enc">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -413,9 +420,10 @@
         <option value="$PROJECT_DIR$/bin/bundle" />
         <option value="$PROJECT_DIR$/bin/rake" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
       </list>
     </option>
   </component>
@@ -467,6 +475,12 @@
               <item name="OODD_proj2" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="environments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OODD_proj2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OODD_proj2" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="initializers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OODD_proj2" type="b2602c69:ProjectViewProjectNode" />
@@ -704,7 +718,7 @@
       <workItem from="1538348880151" duration="4556000" />
       <workItem from="1538355027570" duration="1110000" />
       <workItem from="1538450581631" duration="10055000" />
-      <workItem from="1538505405722" duration="3538000" />
+      <workItem from="1538505405722" duration="5817000" />
     </task>
     <task id="LOCAL-00001" summary="View changes">
       <created>1538340155756</created>
@@ -787,7 +801,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45997000" />
+    <option name="totallyTimeSpent" value="48276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -798,7 +812,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49959514" weight="0.32976827" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.86072874" visible="true" weight="0.2976827" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.859919" visible="true" weight="0.2976827" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -806,8 +820,8 @@
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32976827" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49716598" weight="0.32976827" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.13927126" side_tool="true" visible="true" weight="0.2976827" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49635628" weight="0.32976827" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.14008097" side_tool="true" visible="true" weight="0.2976827" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49635628" weight="0.54901963" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -855,13 +869,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="deploy again!" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180923233757_create_house_hunters.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c0e9a319-5fb6-40ca-a7d1-15301fe2347e/schema/main/table/companies" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c0e9a319-5fb6-40ca-a7d1-15301fe2347e/console.sql" />
     <entry file="file://$PROJECT_DIR$/app/views/signup/new.html.erb">
@@ -1097,11 +1104,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/48ad6f1c-a590-4a81-aef9-b1a6c139d715/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/beb7e6d2-9737-49c5-ba62-34da8ccd7bb4/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1112,17 +1114,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/config/credentials.yml.enc">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
