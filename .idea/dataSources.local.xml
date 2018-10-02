@@ -58,5 +58,11 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="POSTGRES" exact-version="0.0" />
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
+    <data-source name="postgres@localhost [4]" uuid="38869242-4f63-41a0-9b9a-283009cf610a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="POSTGRES" exact-version="0.0" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>postgres</user-name>
+    </data-source>
   </component>
 </project>
