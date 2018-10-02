@@ -63,7 +63,6 @@
     <index id="24" parent="7" name="sqlite_autoindex_ar_internal_metadata_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>key</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="25" parent="7">
@@ -293,7 +292,6 @@
     <index id="76" parent="13" name="sqlite_autoindex_schema_migrations_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>version</ColNames>
-      <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="77" parent="13">
