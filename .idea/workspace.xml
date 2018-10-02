@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b80a98b-cb37-458f-8ddd-51d5f30b6ae1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/bundle" beforeDir="false" afterPath="$PROJECT_DIR$/bin/bundle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/rails" beforeDir="false" afterPath="$PROJECT_DIR$/bin/rails" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/rake" beforeDir="false" afterPath="$PROJECT_DIR$/bin/rake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/yarn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SellingBuying.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SellingBuying.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +260,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="901">
@@ -300,7 +296,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/rake">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -419,7 +415,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1380" />
@@ -480,6 +476,23 @@
             <path>
               <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
               <item name="OODD_Project2" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OODD_Project2" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OODD_Project2" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OODD_Project2" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -487,6 +500,27 @@
               <item name="OODD_Project2" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="fixtures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; ruby-2.4.4-p296 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; ruby-2.4.4-p296 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rubystubs24" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OODD_Project2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; ruby-2.4.4-p296 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="2.4.0" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -692,7 +726,7 @@
       <workItem from="1538346131572" duration="2159000" />
       <workItem from="1538348880151" duration="4556000" />
       <workItem from="1538355027570" duration="1110000" />
-      <workItem from="1538450581631" duration="6367000" />
+      <workItem from="1538450581631" duration="7967000" />
     </task>
     <task id="LOCAL-00001" summary="View changes">
       <created>1538340155756</created>
@@ -775,13 +809,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38771000" />
+    <option name="totallyTimeSpent" value="40371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15303643" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28502023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -794,8 +827,8 @@
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32976827" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49878544" weight="0.32976827" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50040483" side_tool="true" visible="true" weight="0.32976827" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4979757" visible="true" weight="0.32976827" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5020243" side_tool="true" visible="true" weight="0.32976827" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49878544" weight="0.3262032" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1083,13 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/setup">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1111,6 +1137,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
         </state>
       </provider>
     </entry>
