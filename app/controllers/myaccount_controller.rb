@@ -73,13 +73,7 @@ class MyaccountController < ApplicationController
 
   end
 
-def companies
-puts "in compaines ---------------------------------------"
-  @companies= Company.all
-end
-  def house_hunters
-    puts "in house_hunters ---------------------------------------"
-  end
+
   def realtors
     puts "in realtors ---------------------------------------"
   end

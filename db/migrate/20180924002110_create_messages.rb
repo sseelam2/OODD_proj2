@@ -6,6 +6,7 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.string :subject
       t.text :reply
       t.string :house_id
+      t.string :companyId
 
       t.timestamps
     end

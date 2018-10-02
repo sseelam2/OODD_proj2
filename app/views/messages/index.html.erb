@@ -19,7 +19,7 @@
   </thead>
 
   <tbody>
-  <% @messages.each do |message| %>
+  <%@messages.each do |message| %>
     <tr>
       <td><%= message.house_id %></td>
       <td><%= message.subject %></td>
@@ -27,10 +27,13 @@
       <td><%= message.house_hunter_id %></td>
       <td><%= message.reply %></td>
 
-
+      <% if session[:role] == "hunter" && message.house_id.to_s ==  session[:user_id].to_s %>
       <td> <%= link_to 'Edit', edit_message_path(message) %> </td> /
       <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+      <% end %>
+      <% if session[:role] == "realtor" &&  @company_id.to_s == message.companyId.to_s %>
+        <td> <%= link_to 'Reply', edit_message_path(message) %> </td> /
+      <%end %>
     </tr>
   <% end %>
   </tbody>

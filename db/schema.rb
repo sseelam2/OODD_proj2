@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2018_09_30_234735) do
     t.string "subject"
     t.text "reply"
     t.string "house_id"
+    t.string "companyId"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

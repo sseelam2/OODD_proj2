@@ -2,6 +2,13 @@ class CompaniesController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
   def index
     @companies= Company.all
+    puts "------------***********"
+    puts session[:user_id]
+    if(session[:role] == "realtor")
+      @realtor_company=Realtor.find(session[:user_id]).companyId
+      puts @realtor_company
+    end
+
   end
   def new
     @company = Company.new()
@@ -13,7 +20,16 @@ class CompaniesController < ApplicationController
  @company = Company.new(company_params)
  if @company.save
    flash[:noticeAddCompany] = "Signup Successful, Please Login"
-   redirect_to :controller => 'myaccount', :action => 'companies'
+   if(session[:role] == "realtor")
+    @realtor=Realtor.find(session[:user_id])
+     @realtor.companyId=@company.company_id
+    if @realtor.save
+      puts  "new id"
+      @realtor_company=Realtor.find(session[:user_id]).companyId
+      puts  @realtor_company
+    end
+   end
+   redirect_to  :action => 'index'
  else
    puts "-------------"
    flash[:alert_signup] = "Signup Failed, Please Retry!"

@@ -1,16 +1,39 @@
 class MessagesController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
+  before_action :set_post1, only: [:new]
   def index
-    @messages= Message.all
+    if(session[:role] == "admin")
+      @messages= Message.all
+      unless @messages
+        @messages=[]
+        end
+    elsif(session[:role] == "realtor")
+      @company_id=Realtor.find(session[:user_id]).companyId
+      @messages= Message.where( companyId: @company_id)
+      unless @messages
+        @messages=[]
+      end
+
+    elsif(session[:role] == "hunter")
+      @messages= Message.where(house_hunter_id: session[:user_id].to_s)
+      puts @messages
+      unless @messages
+        @messages=[]
+      end
+    end
+
   end
   def new
     @message = Message.new()
+    puts "********************"
+    puts session[:comp_id]
   end
   def create
     puts "Messages add ----------------------------"
 
 
     @message = Message.new(message_params)
+    @message.companyId=session[:comp_id]
     if @message.save
       flash[:noticeAddMessage] = "Signup Successful, Please Login"
       redirect_to  :action => 'index'
@@ -55,12 +78,15 @@ class MessagesController < ApplicationController
 
     @message = Message.find(params[:id])
   end
+  def set_post1
 
+    @message = Message.new()
+  end
   def message_params
     # same as using "params[:realtor]", except that it:
     # - raises an error if :realtor is not present
     # - allows listed attributes to be mass-assigned
-    params.require(:message).permit(:query, :house_hunter_id, :subject, :reply, :house_id)
+    params.require(:message).permit(:query, :house_hunter_id, :subject, :reply, :house_id,:companyId)
   end
 
 end

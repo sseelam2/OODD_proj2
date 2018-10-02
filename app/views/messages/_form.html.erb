@@ -19,7 +19,8 @@
     <%= f.label :house_id, {:class => "col-md-4 control-label" }   %>
     <%= f.text_field :house_id, autofocus: true, autocomplete: "house_id" %>
   </div>
-  <%= f.hidden_field :house_hunter_id, :value =>  :session[:user_id] %>
+  <%= f.hidden_field :house_hunter_id, :value =>  session[:user_id] %>
+  <%= f.hidden_field :companyId, :value => @comp_id %>
 
   <div class="actions">
     <%= f.submit "Add", {:class => "btn btn-lg btn-primary btn-block"} %>

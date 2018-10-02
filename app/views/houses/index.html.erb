@@ -32,9 +32,19 @@
       <td><%= house.year %></td>
       <td><%= house.basement %></td>
       <td><%= house.floor %></td>
-      <td> <%= link_to 'Edit', edit_house_path(house) %> </td>
-      <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
+      <% if session[:role] == "admin" || (session[:role] == "realtor" && (house.realtor_id.to_s == session[:user_id].to_s ) ) %>
+
+    <td> <%= link_to 'Edit', edit_house_path(house) %> </td>
+      <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+
+      <% session[:comp_id] = house.company_id%>
+
+      <% if session[:role] == "hunter"%>
+        <td> <%= link_to 'Inquire', {:controller => "messages", :action => "new" }%> </td>
+        <td> <%= link_to 'Mark Interested', edit_house_path(house) %> </td>
+      <%end %>
     </tr>
   <% end %>
   </tbody>

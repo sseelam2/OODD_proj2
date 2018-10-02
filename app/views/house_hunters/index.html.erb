@@ -25,10 +25,10 @@
       <td><%= house_hunter.email %></td>
       <td><%= house_hunter.preferred_contact %></td>
       <td><%= house_hunter.phoneNumber %></td>
-
+      <% if session[:role] == "admin" %>
       <td> <%= link_to 'Edit', edit_house_hunter_path(house_hunter) %> </td> /
       <td><%= link_to 'Destroy', house_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+      <% end %>
     </tr>
   <% end %>
   </tbody>
