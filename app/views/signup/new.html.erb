@@ -23,7 +23,7 @@
   <% if flash[:alert_signup] %>
     <p class="flash-error"><%= flash[:alert_signup] %></p>
   <% end %>
-  <div id="realtor_signup">
+  <div id="realtor_signu">
 
     <%= form_for(:realtor, :url =>{action: "create"}, method: "post" )do |f| %>
 
@@ -65,7 +65,7 @@
     <% end %>
 
   </div>
-  <div id="hh_signup">
+  <div id="hh_signu">
     <%= form_for(:house_hunter, :url =>{action: "create"}, method: "post" )do |f| %>
 
       <div class="field form-group">
