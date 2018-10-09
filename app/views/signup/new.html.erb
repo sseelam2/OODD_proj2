@@ -1,10 +1,10 @@
 
 <div class="container">
-  <h2>Registration Form</h2><br>
+  <h1><span class="offset-md-4 badge badge-pill badge-secondary">Registration Form</span></h1><br/>
   <div class="container">
 
     <form>
-      <div class="row">
+      <div class="row" id="realtor_signup">
         <div class="col-xs-6 col-md-6">
           <label class="radio-inline">
             <input type="radio" name="op"  value="1" onclick="show1();">  Realtor Sign up
@@ -25,6 +25,7 @@
   <% end %>
   <div id="realtor_signu">
 
+    <h2><span class="badge  badge-info">Realtor Signup</span></h2><br/>
     <%= form_for(:realtor, :url =>{action: "create"}, method: "post" )do |f| %>
 
       <div class="field form-group">
@@ -42,30 +43,32 @@
         <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %>
-        <%= f.password_field :password, autocomplete: "new-password" %>
+        <%= f.password_field :password, autocomplete: "new-password"  %>
       </div>
-
+      <div><img src="/Users/viviniya/Documents/GitHub/finall/OODD_proj2/tmp/info.svg"></div><%="rails roots #{Rails.root}" %>
       <div class="field">
         <%= f.label :Confirm_Password,  {:class => "col-md-4 control-label" }   %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
       <div class="field">
-        <%= f.label :phone_no, {:class => "col-md-4 control-label" }   %>
+        <%= f.label :phone_no, {:class => "col-md-4 control-label", data: { toggle: 'tooltip', placement: 'top', original_title: 'Facebook' }  }   %>
         <%= f.text_field :phoneNumber, autofocus: true, autocomplete: "phoneNumber" %>
       </div>
       <div class="field">
         <%= f.label :Company_Name, {:class => "col-md-4 control-label" }   %>
         <%= f.collection_select(:companyId,Company.all, :id, :name, {:include_blank => "Please select Company"}, {:class=>"col-md-4 control-label"})%>
 
-      </div>
+      </div><br/>
       <%= hidden_field_tag :role, "Realtor"%>
       <div class="actions">
-        <%= f.submit "Sign up", {:class => "btn btn-lg btn-primary btn-block"} %>
+        <%= f.submit "Sign up", {:class => "offset-md-4 col-md-3 btn btn-lg btn-secondary btn-block",data: { toggle: 'tooltip', placement: 'top' } , title: 'Facebook' }%>
       </div>
+      <br/>
     <% end %>
 
   </div>
   <div id="hh_signu">
+    <h2><span class="badge  badge-info">House-Hunter Signup</span></h2><br/>
     <%= form_for(:house_hunter, :url =>{action: "create"}, method: "post" )do |f| %>
 
       <div class="field form-group">
@@ -99,11 +102,11 @@
         <%= f.select :preferred_contact, [['email','Email'],['phone','Phone']], {:class => " col-md-4 control-label"} %>
 
 
-      </div>
+      </div><br/>
       <%= hidden_field_tag :role, "Hunter"%>
       <div class="actions">
-        <%= f.submit "Sign up", {:class => "btn btn-lg btn-primary btn-block"} %>
-      </div>
+        <%= f.submit "Sign up", {:class => "offset-md-4 col-md-3  btn btn-lg btn-secondary btn-block"} %>
+      </div><br/>
     <% end %>
 
   </div>
