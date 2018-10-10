@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/create'
+  get 'sessions/destroy'
   get 'messages/index'
   resources :companies, :realtors, :house_hunters, :houses, :messages
   get 'house_hunters/index'
@@ -10,8 +12,11 @@ Rails.application.routes.draw do
   match ':controller(/:action(/:id))', :via => [:get, :post]
   post 'myaccount/update'
   resources :myaccount, :househunters
- # resources :signup
- # resources :signin
+  # resources :signup
+  # resources :signin
   match ':controller(/:action(/:id))', :via => [:get, :post]
+  root to: "signin#index"
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
