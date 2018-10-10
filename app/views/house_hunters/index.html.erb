@@ -21,7 +21,7 @@
   <hr>
   <% @house_hunters.each do |house_hunter| %>
 
-
+<div class="row">
   <div class ="col-md-2"><%= house_hunter.name %></div>|
   <div class ="col-md-2"><%= house_hunter.email %></div>|
   <div class ="col-md-2"><%= house_hunter.preferred_contact %></div>|
@@ -33,7 +33,7 @@
 <hr>
   <% end %>
 
-
+</div>
 <br>
 <% if session[:role] == "admin" %>
 <%= link_to 'Add House Hunter', { :action =>"new"} , :class => "btn btn-primary"%> <br/><br/>

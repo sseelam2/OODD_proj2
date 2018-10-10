@@ -1,10 +1,14 @@
 <%= form_for(@house )do |f| %>
 
   <div class="field form-group">
-    <%= f.label :company_id ,  {:class => "col-md-4 control-label" }  %>
-    <%= f.text_field :company_id, autofocus: true, autocomplete: "company_id" %>
+    <%= f.label :company_ID ,  {:class => "col-md-4 control-label" }  %>
+    <%= f.text_field :company_id, autofocus: true, autocomplete: "company_id", placeholder: "Valid Company ID " %>
   </div>
 
+  <div class="field form-group">
+    <%= f.label :realtor_ID ,  {:class => "col-md-4 control-label" }  %>
+    <%= f.text_field :realtor_id, autofocus: true, autocomplete: "realtor_id" ,placeholder: "Valid Realtor ID "%>
+  </div>
 
   <div class="field">
     <%= f.label :address, {:class => "col-md-4 control-label" }   %>
@@ -35,9 +39,9 @@
   <div class="field">
     <%= f.label :floor, {:class => "col-md-4 control-label" }   %>
     <%= f.text_field :floor, autofocus: true, autocomplete: "floor" %>
-  </div>
-  <%= f.hidden_field :realtor_id, :value => session[:user_id]%>
+  </div><br>
+
   <div class="actions">
-    <%= f.submit "Add", {:class => "btn btn-lg btn-primary btn-block"} %>
+    <%= f.submit "Add", {:class => "btn btn-lg btn-primary btn-block col-md-3  offset-md-3"} %>
   </div>
 <% end %>

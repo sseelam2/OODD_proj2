@@ -21,7 +21,7 @@
   <br />
   <br />
   <% if flash[:alert_signup] %>
-    <p class="flash-error"><%= flash[:alert_signup] %></p>
+    <p class="flash-error"><%= flash[:alert_signup] %></p> <p class="flash-error">Please make sure email is in right format and Password is minimum 8 characters</p>
   <% end %>
   <div id="realtor_signu">
 
@@ -45,8 +45,7 @@
         <% end %>
         <%= f.password_field :password, autocomplete: "new-password"  %>
       </div>
-      <div><img src="/Users/viviniya/Documents/GitHub/finall/OODD_proj2/tmp/info.svg"></div><%="rails roots #{Rails.root}" %>
-      <div class="field">
+       <div class="field">
         <%= f.label :Confirm_Password,  {:class => "col-md-4 control-label" }   %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       </div>
@@ -61,7 +60,7 @@
       </div><br/>
       <%= hidden_field_tag :role, "Realtor"%>
       <div class="actions">
-        <%= f.submit "Sign up", {:class => "offset-md-4 col-md-3 btn btn-lg btn-secondary btn-block",data: { toggle: 'tooltip', placement: 'top' } , title: 'Facebook' }%>
+        <%= f.submit "Sign up", {:class => "offset-md-4 col-md-3 btn btn-lg btn-secondary btn-block",data: { toggle: 'tooltip', placement: 'top' } , title: 'Please make sure email is in right format and Password is minimum 8 characters' }%>
       </div>
       <br/>
     <% end %>
@@ -99,7 +98,7 @@
       </div>
       <div class="field">
         <%= f.label :preferred_contact, {:class => "col-md-4 control-label" }   %>
-        <%= f.select :preferred_contact, [['email','Email'],['phone','Phone']], {:class => " col-md-4 control-label"} %>
+        <%= f.select :preferred_contact, [['Email','Email'],['Phone','Phone'],['Text','Text']], {:class => " col-md-4 control-label"} %>
 
 
       </div><br/>
