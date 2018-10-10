@@ -2,6 +2,7 @@ class HousesController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show, :destroy]
   def index
     @houses= House.all
+    @photos=Photo.all
   end
   def new
     @house = House.new()

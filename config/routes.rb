@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'houses/index'
   get 'companies/index'
   get 'myaccount/index'
+  get 'photos/new'
+  get 'photos/create'
   get 'admin' => 'admin#index'
   match ':controller(/:action(/:id))', :via => [:get, :post]
   post 'myaccount/update'

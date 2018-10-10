@@ -6,7 +6,7 @@ class CreatePhotos < ActiveRecord::Migration[5.2]
       t.binary :data,         :null => false
       t.string :filename
       t.string :mime_type
-      t.string :house_id
+      t.integer :house_id
 
     end
   end

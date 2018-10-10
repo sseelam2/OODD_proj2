@@ -27,7 +27,7 @@ class PhotosController < ApplicationController
     @photo.house_id=session[:house_id]
     # normal save
     if @photo.save
-      redirect_to(@photo, :notice => 'Photo was successfully created.')
+      redirect_to(:controller => 'houses', :action => 'index', :notice => 'Photo was successfully created.')
     else
       render :action => "new"
     end
