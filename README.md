@@ -6,7 +6,7 @@ This system essentially integrates the flow between Realtor, House Hunter and Ad
 
 Preconfigured admin details -
 -----------------------------
-Email - admin.admin@gmail.com  
+Email - admin@oodd.com  
 Password - admin
 
 Funtionalities of Admin, Realtor and House Hunter -
