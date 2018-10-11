@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   get 'messages/index'
-  resources :companies, :realtors, :house_hunters, :houses, :messages
+  resources :companies, :realtors, :house_hunters, :houses, :messages, :searches
   get 'house_hunters/index'
   get 'realtors/index'
   get 'houses/index'

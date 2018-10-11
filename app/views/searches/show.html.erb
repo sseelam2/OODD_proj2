@@ -1,0 +1,21 @@
+<h1>Search Results</h1>
+
+
+<%if @search.search_houses.empty? %>
+  <p>No matching houses :(</p>
+
+<%else %>
+  <p>Yayy! Match(es) found! :D </p>
+  <%@search.search_houses.each do |s| %>
+    <br>
+    <div class="div">
+
+      <h1><%= link_to s.id, house_path(s) %></h1>
+      <p>Price : <%= s.rent %></p>
+      <p> Sq_Ft : <%= s.sq_ft %></p>
+    </div>
+  <%end %>
+
+<%end %>
+
+<%= link_to "Back", new_search_path %>
