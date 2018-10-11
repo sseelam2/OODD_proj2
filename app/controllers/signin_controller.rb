@@ -1,6 +1,10 @@
 class SigninController < ApplicationController
   def index
     flash[:alert] =""
+    @admin=Admin.new(:name=>"Admin",:email=>"admin@admin.com",:password=>"admin")
+    if @admin.save
+      puts "saved"
+    end
   end
 
   def show
@@ -82,7 +86,12 @@ def validate
     session[:user_id]=""
     redirect_to :controller => 'signin', :action => 'index'
   end
-
+  def admin_params
+    # same as using "params[:realtor]", except that it:
+    # - raises an error if :realtor is not present
+    # - allows listed attributes to be mass-assigned
+    params.require(:realtor).permit(:name,  :email, :password)
+  end
 
 
 end
