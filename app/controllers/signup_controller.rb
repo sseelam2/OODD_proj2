@@ -24,7 +24,7 @@ class SignupController < ApplicationController
     if(params[:role] == "Realtor")
         puts "----------" +params[:role]
 
-    @realtor = Realtor.new(admin_params)
+    @realtor = Realtor.new(realtor_params)
     if @realtor.save
       flash[:notice] = "Signup Successful, Please Login"
       redirect_to :controller => 'signin', :action => 'index'
