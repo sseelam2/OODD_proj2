@@ -53,7 +53,9 @@ Funtionalities of Admin, Realtor and House Hunter -
 ●	If a realtor does not have a company, (s)he cannot post a listing. A realtor can only post houses belong to his/her company.   
 ●	Each house hunter can be interested in and send inquiries to multiple houses. They can also remove themselves from the potential buyers list of a house.  
 
-
+**Note-**  
+●	The search feature works fine in the local deployment, but faces issues in Heroku. (Error log:Invalid relation searches
+)
 
 
 
