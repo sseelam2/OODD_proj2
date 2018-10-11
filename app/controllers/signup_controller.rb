@@ -24,7 +24,7 @@ class SignupController < ApplicationController
     if(params[:role] == "Realtor")
         puts "----------" +params[:role]
 
-    @realtor = Admin.new(admin_params)
+    @realtor = Realtor.new(admin_params)
     if @realtor.save
       flash[:notice] = "Signup Successful, Please Login"
       redirect_to :controller => 'signin', :action => 'index'
@@ -75,12 +75,6 @@ class SignupController < ApplicationController
     # - raises an error if :subject is not present
     # - allows listed attributes to be mass-assigned
     params.require(:house_hunter).permit(:name, :phoneNumber, :email, :password, :preferred_contact)
-  end
-  def admin_params
-    # same as using "params[:realtor]", except that it:
-    # - raises an error if :realtor is not present
-    # - allows listed attributes to be mass-assigned
-    params.require(:realtor).permit(:name,  :email, :password)
   end
 
 end
