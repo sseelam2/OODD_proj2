@@ -5,7 +5,8 @@
 
   <div class="field">
     <%= s.label :location %><br>
-    <%= s.select(:location,options_for_select([['Select','Select'],['Avent Ferry','Avent Ferry'],['Gorman','Gorman']]))%>
+      <%= s.collection_select(:location,House.all, :id, :address, {:include_blank => "Please select location"}, {:class=>"col-md-4 control-label"})%>
+
     <br>
   </div>
 
