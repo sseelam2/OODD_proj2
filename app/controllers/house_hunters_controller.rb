@@ -60,7 +60,7 @@ class HouseHuntersController < ApplicationController
     # same as using "params[:realtor]", except that it:
     # - raises an error if :realtor is not present
     # - allows listed attributes to be mass-assigned
-    params.require(:house_hunter).permit(:email, :name, :preferred_contact, :phoneNumber)
+    params.require(:house_hunter).permit(:name, :phoneNumber, :email, :password, :preferred_contact)
   end
 
 end

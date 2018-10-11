@@ -37,7 +37,10 @@
         <div class ="col-md-2"><%= link_to 'Edit', edit_message_path(message) %>  /
       <%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       <% end %>
-      <% if session[:role] == "realtor" &&  @company_id.to_s == message.companyId.to_s %>
+      <% if session[:role] == "admin"%>
+           <%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  <% end %>
+    <% if session[:role] == "realtor" &&  @company_id.to_s == message.companyId.to_s %>
         <div class ="col-md-2"> <%= link_to 'Reply', edit_message_path(message) %> </div>
       <%end %>
     </div>

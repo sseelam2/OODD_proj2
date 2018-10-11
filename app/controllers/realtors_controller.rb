@@ -60,7 +60,7 @@ class RealtorsController < ApplicationController
     # same as using "params[:realtor]", except that it:
     # - raises an error if :realtor is not present
     # - allows listed attributes to be mass-assigned
-    params.require(:realtor).permit(:email, :name, :companyId, :phoneNumber)
+    params.require(:realtor).permit(:name, :phoneNumber, :email, :password, :companyId)
   end
 
 

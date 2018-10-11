@@ -41,18 +41,25 @@
     <div class ="col-md-1"><%= house.style %></div>|
     <div class ="col-md-1"><%= house.year %></div>|
     <div class ="col-md-1"><%= house.basement %></div>|
-    <div class ="col-md-1"><%= house.floor %></div>|
+    <div class ="col-md-1"><%= house.floor %></div>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
       <% if session[:role] == "admin" || (session[:role] == "realtor" && (house.realtor_id.to_s == session[:user_id].to_s ) ) %>
-
-      <div class ="col-md-1"> <%= link_to 'Edit', edit_house_path(house) %> /
-        <%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to 'Edit', edit_house_path(house) %> /
+        <%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
 
       <% if session[:role] == "realtor" && session[:comp_id] = house.company_id%>
+    <% Photo.uncached do
+      @photo=  Photo.find_by_house_id(house.id)
+    end%>
 
+    <% if @photo%>
+
+      &nbsp;&nbsp;&nbsp;     <%= link_to 'View Photo', {:controller =>"photos",:action =>"serve", :id => @photo.id} , method:"get"%>/
+    <% end %>
     <%session[:house_id]=house.id %>
-    <div class ="col-md-1">   <%= link_to 'Upload Photo', {:controller =>"photos",:action =>"new"} %></div>
+    &nbsp;&nbsp;&nbsp;     <%= link_to 'Upload Photo', {:controller =>"photos",:action =>"new"} %>
 
 <% end %>
   <% if session[:role] == "hunter"%>
@@ -66,7 +73,7 @@
     <div class ="col-md-2"> <%= link_to 'View Photo', {:controller =>"photos",:action =>"serve", :id => @photo.id} , method:"get"%>/
     <% end %>
       <%= link_to 'Inquire', {:controller => "messages", :action => "new" }%>/
-        <%= link_to 'Mark Interested', edit_house_path(house) %> </div>
+        <%= link_to 'Mark Interested', house_path(house) %> </div>
       <%end %>
 <hr>
 </div>

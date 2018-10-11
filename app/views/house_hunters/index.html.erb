@@ -31,9 +31,11 @@
       <%= link_to 'Destroy', house_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       <% end %>
 <hr>
+  <br>
+</div>
   <% end %>
 
-</div>
+
 <br>
 <% if session[:role] == "admin" %>
 <%= link_to 'Add House Hunter', { :action =>"new"} , :class => "btn btn-primary"%> <br/><br/>
