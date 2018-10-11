@@ -20,7 +20,7 @@ class SearchesController < ApplicationController
   private
 
   def search_params
-    params.permit(:searches).permit(:location, :min_sq_ft, :max_sq_ft, :min_price, :max_price)
+    params.require(:searches).permit(:location, :min_sq_ft, :max_sq_ft, :min_price, :max_price)
   end
 
 end
